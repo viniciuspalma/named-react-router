@@ -1,0 +1,9 @@
+packages/*/cjs
+packages/*/es
+packages/*/umd
+
+node_modules
+coverage
+
+npm-debug.log
+yarn-error.log
