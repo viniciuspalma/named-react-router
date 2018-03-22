@@ -1,31 +1,30 @@
 {
-    "name": "named-react-router-dom",
-    "description": "Use named routes with react-router v4",
-    "version": "0.0.0",
-    "keywords": [
-      "react",
-      "named-route",
-      "named",
-      "router",
-      "route",
-      "link"
-    ],
-    "main": "cjs/index.js",
-    "module": "es/index.js",
-    "umd:main": "umd/index.min.js",
-    "files": [
-      "cjs",
-      "es"
-    ],
-    "peerDependencies": {
-      "prop-types": "^15.6.0",
-      "react": "^15.0.0 || ^16.0.0",
-      "react-router-dom": "^4.0.0"
-    },
-    "license": "MIT",
-    "homepage": "https://github.com/pedsmoreira/named-react-router",
-    "bugs": "https://github.com/pedsmoreira/named-react-router/issues",
-    "repository": "pedsmoreira/named-react-router",
-    "author": "Pedro Moreira <pedsmoreira@gmail.com>"
-  }
-  
+  "name": "named-react-router-dom",
+  "description": "Use named routes with react-router v4",
+  "version": "0.0.1",
+  "keywords": [
+    "react",
+    "named-route",
+    "named",
+    "router",
+    "route",
+    "link"
+  ],
+  "main": "cjs/index.js",
+  "module": "es/index.js",
+  "umd:main": "umd/index.min.js",
+  "files": [
+    "cjs",
+    "es"
+  ],
+  "peerDependencies": {
+    "prop-types": "^15.6.0",
+    "react": "^15.0.0 || ^16.0.0",
+    "react-router-dom": "^4.0.0"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/pedsmoreira/named-react-router",
+  "bugs": "https://github.com/pedsmoreira/named-react-router/issues",
+  "repository": "pedsmoreira/named-react-router",
+  "author": "Pedro Moreira <pedsmoreira@gmail.com>"
+}
