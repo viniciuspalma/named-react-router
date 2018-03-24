@@ -1,7 +1,6 @@
 // @flow
 
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import { Switch } from 'react-router-dom';
 
 type Props = {
@@ -9,10 +8,6 @@ type Props = {
 };
 
 export default class NamedSwitch extends React.Component<Props> {
-  static contextTypes = {
-    appRoute: PropTypes.string.isRequired
-  };
-
   render() {
     return (
       <Switch>
