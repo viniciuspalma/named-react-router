@@ -3,7 +3,7 @@
   "workspaces": [
     "packages/*"
   ],
-  "version": "0.0.3",
+  "version": "1.0.0",
   "scripts": {
     "build": "cross-env NODE_ENV=production node ./scripts/build.js",
     "build:package": "cross-env NODE_ENV=production node ./scripts/build-package.js",
