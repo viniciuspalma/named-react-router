@@ -2,7 +2,7 @@
 
 import type { RouteProps } from 'react-router-dom';
 
-type Options = {
+export type Options = {
   noNamespacePath?: boolean
 } & RouteProps;
 

@@ -3,14 +3,13 @@
 import * as React from 'react';
 import { Route as BrowserRoute, type RouteProps } from 'react-router-dom';
 
-import Route from './Route';
+import Route, { type Options } from './Route';
 
 type Props = {
-  name: string,
-  path?: string
+  name: string
 };
 
-type CombinedProps = Props & RouteProps;
+type CombinedProps = Props & Options & RouteProps;
 
 export default class NamedRoute extends React.Component<CombinedProps> {
   path: string;
