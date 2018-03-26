@@ -76,6 +76,17 @@ To fix that, use `<NamedSwitch />`, which renders all children before passing th
 
 If you want to create your own `NamedComponent`, please take a look at the [`NamedRoute` implementation](https://github.com/pedsmoreira/named-react-router/blob/master/packages/named-react-router-dom/src/NamedRoute.js).
 
+```js
+import { NamedRedirect, NamedRoute, NamedSwitch } from 'named-react-router-dom';
+
+<NamedSwitch>
+  <NamedRoute name="home" />
+  <NamedRoute name="settings" />
+  <NamedRedirect name="home" from="/" />;
+  <NamedRedirect name="notFound" />;
+</NamedSwitch>;
+```
+
 ## Flow support
 
 All packages are built with flow and provide flow support from the get go. Flow will automatically include typings when you import `named-react-router-dom`.
