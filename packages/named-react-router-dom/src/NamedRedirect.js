@@ -8,12 +8,12 @@ import NamedRoute from './NamedRoute';
 type Props = RedirectProps;
 
 export default class NamedRedirect extends React.Component<Props> {
-  static renderStatic(props: Props) {
+  static render(props: Props) {
     const { name, ...rest } = props;
     return <Redirect to={NamedRoute.pathTo(name)} {...rest} />;
   }
 
   render() {
-    return NamedRedirect.renderStatic(this.props);
+    return NamedRedirect.render(this.props);
   }
 }

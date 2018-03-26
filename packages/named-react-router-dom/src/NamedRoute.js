@@ -1,7 +1,9 @@
 // @flow
 
 import * as React from 'react';
-import { Route, type RouteProps } from 'react-router-dom';
+import { Route as BrowserRoute, type RouteProps } from 'react-router-dom';
+
+import Route from './Route';
 
 type Props = {
   name: string,
@@ -13,34 +15,18 @@ type CombinedProps = Props & RouteProps;
 export default class NamedRoute extends React.Component<CombinedProps> {
   path: string;
 
-  static namedRoutes: { [key: string]: string } = {};
-
-  static pathTo(name: string, params: Object = {}, search?: string, hash?: string) {
-    const path = NamedRoute.namedRoutes[name];
-    if (!path) throw new Error(`Undefined named route ${name}`);
-
-    let fullPath = path;
-    Object.keys(params).forEach(key => {
-      if (path.indexOf(`:${key}`) === -1) throw new Error(`Undefined param ${key} for named route ${name}`);
-      fullPath = fullPath.replace(`:${key}`, params[key]);
-    });
-
-    if (search) fullPath += `?${search}`;
-    if (hash) fullPath += `#${hash}`;
-
-    return fullPath;
+  static pathTo(name: string, params?: Object, search?: string, hash?: string) {
+    return Route.get(name, params, search, hash);
   }
 
-  static renderStatic(props: CombinedProps) {
-    const { name, path, ...rest } = props;
+  static render(props: CombinedProps) {
+    const { name, ...options } = props;
+    const route = new Route(name, options);
 
-    const pathOrName = path || name;
-    NamedRoute.namedRoutes[name] = pathOrName;
-
-    return <Route path={pathOrName} {...rest} />;
+    return <BrowserRoute {...route.options} path={route.path} />;
   }
 
   render() {
-    return NamedRoute.renderStatic(this.props);
+    return NamedRoute.render(this.props);
   }
 }

@@ -12,8 +12,10 @@ export default class NamedSwitch extends React.Component<Props> {
     return (
       <Switch>
         {React.Children.map(this.props.children, child => {
-          const renderStatic = child.type.renderStatic;
-          return renderStatic ? renderStatic(child.props, this.context) : child;
+          if (!child) return null;
+
+          const render = child.type.render;
+          return render ? render(child.props, this.context) : child;
         })}
       </Switch>
     );

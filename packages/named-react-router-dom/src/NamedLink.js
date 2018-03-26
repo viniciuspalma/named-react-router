@@ -18,8 +18,7 @@ export default class NamedLink extends React.Component<Props> {
   render() {
     const { name, params, search, hash, navLink, ...rest } = this.props;
 
-    let path = NamedRoute.pathTo(name, params, search, hash);
-
+    const path = NamedRoute.pathTo(name, params, search, hash);
     const component = navLink ? NavLink : Link;
     return React.createElement(component, { to: path, ...rest });
   }
