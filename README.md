@@ -50,10 +50,11 @@ import { NamedLink } from 'named-react-router-dom';
 <NamedLink name="dashboard.home" navLink />;
 ```
 
-Aside from `name` and `navLink`, Any other properties will be spread, so you can use them if you need.
+Aside from `name` and `navLink`, any other properties will be spread, so you can use them if you need.
 
-[<Link /> react-router-dom API](https://reacttraining.com/react-router/web/api/Link)
-[<NavLink /> react-router-dom API](https://reacttraining.com/react-router/web/api/NavLink)
+<Link /> [react-router-dom API](https://reacttraining.com/react-router/web/api/Link)
+
+<NavLink /> [react-router-dom API](https://reacttraining.com/react-router/web/api/NavLink)
 
 ### NamedRedirect
 
