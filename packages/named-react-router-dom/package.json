@@ -1,7 +1,7 @@
 {
   "name": "named-react-router-dom",
   "description": "Use named routes with react-router v4",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": [
     "react",
     "named-route",
