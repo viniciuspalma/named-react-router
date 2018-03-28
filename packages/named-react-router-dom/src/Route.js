@@ -40,7 +40,12 @@ export default class Route {
     const current = split.pop();
 
     if (!this.options.noNamespacePath) {
-      split.forEach(namespace => (path += Route.routes[namespace].path));
+      split.forEach(namespace => {
+        const namespaceRoute = Route.routes[namespace];
+
+        if (!namespaceRoute) throw new Error(`Undefined route namespace ${namespace}`);
+        path += namespaceRoute.path;
+      });
     }
 
     path += Route.getPrefixedValue(this.options.path) || `/${current}`;

@@ -4,5 +4,6 @@ import NamedLink from './NamedLink';
 import NamedRoute from './NamedRoute';
 import NamedSwitch from './NamedSwitch';
 import NamedRedirect from './NamedRedirect';
+import Route from './Route';
 
-export { NamedLink, NamedRoute, NamedSwitch, NamedRedirect };
+export { Route, NamedLink, NamedRoute, NamedSwitch, NamedRedirect };

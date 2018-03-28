@@ -57,6 +57,11 @@ describe('Route', () => {
       const route = new Route('namespace.route', { noNamespacePath: true });
       expect(route.path).toEqual('/route');
     });
+
+    it('throws an error if the namespace does not exist', () => {
+      Route.routes = {};
+      expect(() => new Route('namespace.route')).toThrowError();
+    });
   });
 
   describe('#with', () => {
