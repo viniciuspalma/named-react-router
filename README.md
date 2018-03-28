@@ -11,7 +11,7 @@
 ## Install
 
 ```sh
-npm install --save named-react-router-dom
+npm install --save react-router-dom named-react-router-dom
 ```
 
 _React Native: not available. PRs are welcome_
