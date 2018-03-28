@@ -34,7 +34,9 @@ it will get formatted automatically once you commit.
 
 ## Releasing
 
+To release you'll need [oao](<(https://github.com/guigrpa/oao)>) installed globally
+
 ```sh
 yarn build
-yarn oao publish
+oao publish
 ```
