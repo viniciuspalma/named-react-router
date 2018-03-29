@@ -90,7 +90,7 @@ import { NamedRedirect, NamedRoute, NamedSwitch } from 'named-react-router-dom';
 
 ### Route (not a React Component)
 
-In some cases you may need to register and get links to 
+In some cases you may need to register and get links to routes outside of React. You can do so by using the Route api dirctly.
 
 ```js
 import { Route } from 'named-react-router-dom';
