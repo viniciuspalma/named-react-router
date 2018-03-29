@@ -36,7 +36,7 @@ import { NamedRoute } from 'named-react-router-dom';
 <NamedRoute name="dashboard.home" path="overview" component={Component} noNamespacePath />
 ```
 
-You can also add any other `<Route />` [properties from react-router-dom](https://reacttraining.com/react-router/web/api/Route)
+You can also add any other [Route properties from react-router-dom](https://reacttraining.com/react-router/web/api/Route)
 
 ### NamedLink
 
@@ -52,9 +52,9 @@ import { NamedLink } from 'named-react-router-dom';
 
 Aside from `name` and `navLink`, any other properties will be spread, so you can use them if you need.
 
-`<Link />` [react-router-dom API](https://reacttraining.com/react-router/web/api/Link)
+[react-router-dom Link API](https://reacttraining.com/react-router/web/api/Link)
 
-`<NavLink />` [react-router-dom API](https://reacttraining.com/react-router/web/api/NavLink)
+[react-router-dom NavLink API](https://reacttraining.com/react-router/web/api/NavLink)
 
 ### NamedRedirect
 
@@ -67,7 +67,7 @@ import { NamedRedirect } from 'named-react-router-dom';
 
 Aside from `name`, any properties are spread to `<Redirect />`.
 
-[<Redirect /> react-router-dom API](https://reacttraining.com/react-router/web/api/Redirect)
+[react-router-dom Redirect API](https://reacttraining.com/react-router/web/api/Redirect)
 
 ### NamedSwitch
 
@@ -87,6 +87,22 @@ import { NamedRedirect, NamedRoute, NamedSwitch } from 'named-react-router-dom';
   <NamedRedirect name="notFound" />;
 </NamedSwitch>;
 ```
+
+### Route (not a React Component)
+
+In some cases you may need to register and get links to 
+
+```js
+import { Route } from 'named-react-router-dom';
+
+// Add named route to index
+new Route('name', options: Options);
+
+// Get link
+Route.get(name: string, params?: Object, search?: string, hash?: string);
+```
+
+Just like `<NamedRoute />`, the `Options` when creating a new Route are all the other [Route properties from react-router-dom](https://reacttraining.com/react-router/web/api/Route), including path.
 
 ## Flow support
 
